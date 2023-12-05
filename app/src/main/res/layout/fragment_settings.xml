@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- TODO: Update blank fragment layout -->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="Settings Fragment"-->
+<!--        android:textSize="36sp"-->
+<!--        android:textColor="@color/blue"-->
+<!--        android:gravity="center"/>-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top">
+
+        <TextView
+            android:id="@+id/text_dane3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/tx1"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/title_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginTop="3dp"
+            android:backgroundTint="@color/f1"
+            android:text="@string/tx2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_dane3"/>
+
+<!--        android:layout_marginStart="45dp"-->
+
+        <TextView
+            android:id="@+id/text_dane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="1dp"
+            android:text="@string/tx3"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:visibility="visible"
+            android:layout_marginStart="10dp" />
+
+        <View
+            android:id="@+id/title_separator2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textContainer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="3dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/yellow"
+                android:gravity="top|start"
+                android:hint="@string/txInputHint"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="1"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbars="vertical" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/cancT"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/grey"
+            android:text="@string/tx4" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="-50dp"
+            android:backgroundTint="@color/grey"
+            android:text="@string/tx5"
+            android:layout_gravity="left|center_vertical"/>
+
+    </LinearLayout>
+
+</FrameLayout>

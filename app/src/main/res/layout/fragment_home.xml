@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="Home Fragment"-->
+<!--        android:textSize="36sp"-->
+<!--        android:textColor="@color/blue"-->
+<!--        android:gravity="center"/>-->
+
+
+<!--    <RelativeLayout-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="220dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="80dp"
+            android:text="@string/bt1"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/yellow"
+            android:textSize="22sp"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="220dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/bt2"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/yellow"
+            android:textSize="22sp"
+            android:textStyle="bold|italic"/>
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="220dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/bt3"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/yellow"
+            android:textSize="22sp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+
+<!--    app:layout_constraintBottom_toBottomof="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintHorizontal_bias="0.498"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintTop_toTopOf="parent"-->
+
+
+</FrameLayout>

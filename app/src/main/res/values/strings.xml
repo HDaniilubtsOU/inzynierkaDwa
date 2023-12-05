@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">INZYNIERKA</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bt1">Rejstracja</string>
+    <string name="bt2">Zgłoś</string>
+    <string name="bt3">Zgłoszone</string>
+    <string name="tx1">Dane</string>
+    <string name="tx2">Zarejstruj się</string>
+    <string name="tx3">Developer</string>
+    <string name="txInputHint">Masz uwagi do aplikacji?</string>
+    <string name="tx4">Cancel</string>
+    <string name="tx5">Send</string>
+
+    <!-- ButtonSheet-->
+    <string name="hintName">Name</string>
+    <string name="hintSurname">Surname</string>
+    <string name="hintMail">Mail</string>
+    <string name="hintNumber">Number</string>
+
+    <string name="my_map_api_key">AIzaSyDuTUG30LcnANW4xF0Bpn_eoLa725W55TU</string>
+
+</resources>
