@@ -1,11 +1,11 @@
 package com.example.inzynierka
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.ViewModelProvider
 import com.example.inzynierka.databinding.FragmentRegTaskSheetBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -32,6 +32,47 @@ class RegTaskSheet : BottomSheetDialogFragment() {
             Toast.makeText(context, "click save", Toast.LENGTH_SHORT).show()
             saveAction()
         }
+
+        fun isValidEmail(email: String): Boolean {
+            val emailRegex = Regex("^[A-Za-z](.*)([@]{1})(.{1,})(\\.)(.{1,})")
+            return emailRegex.matches(email)
+        }
+        binding.name.doOnTextChanged { text, start, before, count ->
+            if (text!!.isEmpty()){
+                binding.nameContainerSheet.error = "Pole nie może być pustym"
+            } else if (text!!.any { it.isDigit() }){
+                binding.nameContainerSheet.error = "Nie możesz używać liczb"
+            } else {
+                binding.nameContainerSheet.helperText = "OK"
+            }
+        }
+        binding.surname.doOnTextChanged { text, start, before, count ->
+            if (text!!.isEmpty()){
+                binding.surnameContainerSheet.error = "Pole nie może być pustym"
+            } else if (text!!.any { it.isDigit() }){
+                binding.surnameContainerSheet.error = "Pole nie może być pustym"
+            } else {
+                binding.surnameContainerSheet.helperText = "OK"
+            }
+        }
+        binding.mail.doOnTextChanged { text, start, before, count ->
+//            if (){
+//
+//            } else {
+//                binding.emailContainer.helperText = "OK"
+//            }
+        }
+        binding.number.doOnTextChanged { text, start, before, count ->
+            if (text!!.isEmpty()){
+                binding.numberContainerSheet.error = "Pole nie może być pustym"
+            }
+            else if (text!!.length < 9){
+                binding.numberContainerSheet.error = "brak liczb"
+            } else {
+                binding.numberContainerSheet.helperText = "OK"
+            }
+        }
+
         return binding.root
     }
 

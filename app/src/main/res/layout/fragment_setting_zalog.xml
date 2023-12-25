@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -38,8 +39,13 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="5dp"
-        app:helperText="Required"
-        app:helperTextTextColor="@android:color/holo_red_dark"
+        android:hint="Imię"
+        app:startIconDrawable="@drawable/baseline_person"
+        app:helperText=""
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/green"
         app:layout_constraintEnd_toEndOf="@+id/text_dane2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/text_dane2"
@@ -47,10 +53,10 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nameEditText"
+            android:maxLength="20"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/yellow"
-            android:hint="Imię"
             android:inputType="textPersonName"
             android:lines="1" />
 
@@ -63,18 +69,23 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="5dp"
-        app:helperText="Required"
-        app:helperTextTextColor="@android:color/holo_red_dark"
+        android:hint="Nazwisko"
+        app:startIconDrawable="@drawable/baseline_person"
+        app:helperText=""
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/green"
         app:layout_constraintEnd_toEndOf="@+id/nameContainer"
         app:layout_constraintStart_toStartOf="@+id/nameContainer"
         app:layout_constraintTop_toBottomOf="@+id/nameContainer">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/surnameEditText"
+            android:maxLength="20"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/yellow"
-            android:hint="Nazwisko"
             android:inputType="textPersonName"
             android:lines="1" />
 
@@ -87,8 +98,11 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="5dp"
-        app:helperText="Required"
-        app:helperTextTextColor="@android:color/holo_red_dark"
+        app:startIconDrawable="@drawable/baseline_email"
+        app:helperText=""
+        app:counterEnabled="true"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/green"
         app:layout_constraintEnd_toEndOf="@+id/surnameContainer"
         app:layout_constraintStart_toStartOf="@+id/surnameContainer"
         app:layout_constraintTop_toBottomOf="@+id/surnameContainer">
@@ -111,14 +125,20 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="5dp"
-        app:helperText="Required"
-        app:helperTextTextColor="@android:color/holo_red_dark"
+        app:startIconDrawable="@drawable/baseline_call"
+        app:prefixText="+48"
+        app:helperText=""
+        app:counterEnabled="true"
+        app:counterMaxLength="9"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/green"
         app:layout_constraintEnd_toEndOf="@+id/emailContainer"
         app:layout_constraintStart_toStartOf="@+id/emailContainer"
         app:layout_constraintTop_toBottomOf="@+id/emailContainer">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/numberEditText"
+            android:maxLength="9"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/yellow"
@@ -128,47 +148,49 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/canc"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="3dp"
-        android:backgroundTint="@color/grey"
-        android:text="cancel"
-        app:layout_constraintStart_toStartOf="@+id/numberContainer"
-        app:layout_constraintTop_toBottomOf="@+id/numberContainer" />
+<!--    <Button-->
+<!--        android:id="@+id/canc"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginStart="4dp"-->
+<!--        android:layout_marginTop="3dp"-->
+<!--        android:backgroundTint="@color/grey"-->
+<!--        android:text="cancel"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/numberContainer"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/numberContainer" />-->
 
-    <Button
-        android:id="@+id/save"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="40dp"
-        android:backgroundTint="@color/grey"
-        android:text="save"
-        app:layout_constraintEnd_toEndOf="@+id/numberContainer"
-        app:layout_constraintTop_toBottomOf="@+id/numberContainer" />
+<!--    <Button-->
+<!--        android:id="@+id/save"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginTop="3dp"-->
+<!--        android:layout_marginEnd="40dp"-->
+<!--        android:backgroundTint="@color/grey"-->
+<!--        android:text="save"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/numberContainer"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/numberContainer" />-->
 
     <Button
         android:id="@+id/us_k"
         android:layout_width="156dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="13dp"
         android:backgroundTint="@color/f2"
         android:text="usuń kąto"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/canc" />
+        app:layout_constraintTop_toBottomOf="@+id/numberContainer" />
 
     <Button
         android:id="@+id/wyl"
         android:layout_width="156dp"
         android:layout_height="55dp"
+        android:layout_marginTop="13dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/f1"
-        android:text="wylogujśie"
+        android:text="edytój dane"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/save" />
+        app:layout_constraintTop_toBottomOf="@+id/numberContainer" />
 
 
     <TextView
@@ -198,19 +220,20 @@
         android:id="@+id/textContainer"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="3dp"
-        app:helperText="Required"
-        app:helperTextTextColor="@android:color/holo_red_dark"
         app:layout_constraintEnd_toEndOf="@+id/numberContainer"
         app:layout_constraintStart_toStartOf="@+id/numberContainer"
-        app:layout_constraintTop_toBottomOf="@+id/text_dane">
+        app:layout_constraintTop_toBottomOf="@+id/text_dane"
+        app:counterEnabled="true"
+        app:counterMaxLength="100"
+        app:endIconMode="clear_text">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textEditText"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="110dp"
             android:background="@color/yellow"
             android:gravity="top|start"
             android:hint="Masz uwagi do aplikacji?"
@@ -218,20 +241,21 @@
             android:lines="8"
             android:maxLines="10"
             android:minLines="1"
+            android:maxLength="100"
             android:scrollbarStyle="insideOverlay"
             android:scrollbars="vertical" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/cancT"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/grey"
-        android:text="cancel"
-        app:layout_constraintStart_toStartOf="@+id/canc"
-        app:layout_constraintTop_toBottomOf="@+id/textContainer" />
+<!--    <Button-->
+<!--        android:id="@+id/cancT"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:backgroundTint="@color/grey"-->
+<!--        android:text="cancel"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/us_k"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textContainer" />-->
 
     <Button
         android:id="@+id/send"
@@ -240,6 +264,6 @@
         android:layout_marginTop="8dp"
         android:backgroundTint="@color/grey"
         android:text="send"
-        app:layout_constraintEnd_toEndOf="@+id/save"
+        app:layout_constraintEnd_toEndOf="@+id/wyl"
         app:layout_constraintTop_toBottomOf="@+id/textContainer" />
 </androidx.constraintlayout.widget.ConstraintLayout>
