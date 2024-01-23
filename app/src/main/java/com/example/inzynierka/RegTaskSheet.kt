@@ -29,8 +29,14 @@ class RegTaskSheet : BottomSheetDialogFragment() {
         binding = FragmentRegTaskSheetBinding.inflate(inflater, container, false)
 
         binding.saveButton.setOnClickListener{
-            Toast.makeText(context, "click save", Toast.LENGTH_SHORT).show()
-            saveAction()
+            if (binding.name.text!!.isEmpty() || binding.surname.text!!.isEmpty() ||
+                binding.mail.text!!.isEmpty() || binding.number.text!!.isEmpty()){
+                Toast.makeText(context, "Do not empty!", Toast.LENGTH_SHORT).show()
+            } else{
+                Toast.makeText(context, "click save", Toast.LENGTH_SHORT).show()
+                saveAction()
+            }
+
         }
 
         fun isValidEmail(email: String): Boolean {
@@ -56,11 +62,14 @@ class RegTaskSheet : BottomSheetDialogFragment() {
             }
         }
         binding.mail.doOnTextChanged { text, start, before, count ->
-//            if (){
-//
-//            } else {
-//                binding.emailContainer.helperText = "OK"
-//            }
+            val email = text.toString()
+            if (email!!.isEmpty()){
+                binding.emailContainerSheet.error = "Pole nie może być pustym"
+            } else if (!isValidEmail(email)){
+                binding.emailContainerSheet.error = "Nieprawidłowy format adresu e-mail"
+            }else {
+                binding.emailContainerSheet.helperText = "OK"
+            }
         }
         binding.number.doOnTextChanged { text, start, before, count ->
             if (text!!.isEmpty()){

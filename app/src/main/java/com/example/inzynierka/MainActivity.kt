@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 //        setContentView(R.layout.activity_main)
 
         bottomNavigationView = findViewById(R.id.bottom_navigation)
+        bottomNavigationView.selectedItemId = R.id.home
 
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when(menuItem.itemId){
@@ -38,7 +39,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
         replaceFragment(HomeFragment())
-
     }
 
     private fun replaceFragment(fragment: Fragment){

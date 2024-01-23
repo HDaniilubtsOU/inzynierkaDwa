@@ -46,12 +46,31 @@ class SettingsFragment : Fragment() {
         }
         binding.numberEditText.isEnabled = false
 
-        binding.usK.setOnClickListener{
-            if (binding.usK.text == "usuń kąto") {
-                binding.usK.text = "załóż kąto"
 
-            } else {
-                binding.usK.text = "usuń kąto"
+//      dodać warunek że jak nie zarejstrowany -> można zarejstrować się (bottom dodać dane)
+        binding.usK.setOnClickListener{
+            if (binding.usK.text == "usuń dane") {
+                binding.usK.text = "załóż dane"
+                binding.nameEditText.isEnabled = true
+                binding.surnameEditText.isEnabled = true
+                binding.emailEditText.isEnabled = true
+                binding.numberEditText.isEnabled = true
+                binding.nameEditText.text = null
+                binding.emailEditText.text = null
+                binding.surnameEditText.text = null
+                binding.numberEditText.text = null
+            } else if(
+                binding.nameEditText.text!!.isEmpty() ||
+                binding.surnameEditText.text!!.isEmpty() ||
+                binding.emailEditText.text!!.isEmpty() ||
+                binding.numberEditText.text!!.isEmpty()){
+                Toast.makeText(context, "Do not empty!", Toast.LENGTH_SHORT).show()
+            }else {
+                binding.usK.text = "usuń dane"
+                binding.nameEditText.isEnabled = false
+                binding.surnameEditText.isEnabled = false
+                binding.emailEditText.isEnabled = false
+                binding.numberEditText.isEnabled = false
             }
             Toast.makeText(context, "usuń kąto/załóż kąto", Toast.LENGTH_SHORT).show()
         }
@@ -99,11 +118,14 @@ class SettingsFragment : Fragment() {
             }
         }
         binding.emailEditText.doOnTextChanged { text, start, before, count ->
-//            if (){
-//
-//            } else {
-//                binding.emailContainer.helperText = "OK"
-//            }
+            val email = text.toString()
+            if (email!!.isEmpty()){
+                binding.emailContainer.error = "Pole nie może być pustym"
+            } else if (!isValidEmail(email)){
+                binding.emailContainer.error = "Nieprawidłowy format adresu e-mail"
+            }else {
+                binding.emailContainer.helperText = "OK"
+            }
         }
         binding.numberEditText.doOnTextChanged { text, start, before, count ->
             if (text!!.isEmpty()){
@@ -117,5 +139,19 @@ class SettingsFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+//  funkcja dla dodawania tekstu (taskViewModel)
+    private fun saveActionEdyt()
+    {
+        taskViewModel.name.value = binding.nameEditText.text.toString()
+        taskViewModel.surname.value = binding.surnameEditText.text.toString()
+        taskViewModel.mail.value = binding.emailEditText.text.toString()
+        taskViewModel.number.value = binding.numberEditText.text.toString()
+        binding.nameEditText.setText("")
+        binding.surnameEditText.setText("")
+        binding.emailEditText.setText("")
+        binding.numberEditText.setText("")
+        parentFragmentManager.popBackStack()
     }
 }

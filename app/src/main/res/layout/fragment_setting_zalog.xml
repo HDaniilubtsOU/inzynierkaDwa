@@ -1,269 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <TextView
-        android:id="@+id/text_dane2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="3dp"
-        android:text="Dane"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold|italic"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/nameContainer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/title_separator3"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/nameContainer"
-        app:layout_constraintTop_toBottomOf="@id/text_dane2" />
+        android:layout_height="wrap_content">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="5dp"
-        android:hint="Imię"
-        app:startIconDrawable="@drawable/baseline_person"
-        app:helperText=""
-        app:counterEnabled="true"
-        app:counterMaxLength="20"
-        app:endIconMode="clear_text"
-        app:helperTextTextColor="@color/green"
-        app:layout_constraintEnd_toEndOf="@+id/text_dane2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/text_dane2"
-        app:layout_constraintTop_toBottomOf="@+id/text_dane2">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nameEditText"
-            android:maxLength="20"
+        <TextView
+            android:id="@+id/text_dane2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            android:text="Dane"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/nameContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.055"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/title_separator3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/yellow"
-            android:inputType="textPersonName"
-            android:lines="1" />
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/nameContainer"
+            app:layout_constraintTop_toBottomOf="@id/text_dane2" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/surnameContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="5dp"
-        android:hint="Nazwisko"
-        app:startIconDrawable="@drawable/baseline_person"
-        app:helperText=""
-        app:counterEnabled="true"
-        app:counterMaxLength="20"
-        app:endIconMode="clear_text"
-        app:helperTextTextColor="@color/green"
-        app:layout_constraintEnd_toEndOf="@+id/nameContainer"
-        app:layout_constraintStart_toStartOf="@+id/nameContainer"
-        app:layout_constraintTop_toBottomOf="@+id/nameContainer">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/surnameEditText"
-            android:maxLength="20"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameContainer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/yellow"
-            android:inputType="textPersonName"
-            android:lines="1" />
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:hint="Imię"
+            app:startIconDrawable="@drawable/baseline_person"
+            app:helperText=""
+            app:counterEnabled="true"
+            app:counterMaxLength="20"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/green"
+            app:layout_constraintEnd_toEndOf="@+id/text_dane2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/text_dane2"
+            app:layout_constraintTop_toBottomOf="@+id/text_dane2">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameEditText"
+                android:maxLength="20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/yellow"
+                android:inputType="textPersonName"
+                android:lines="1" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="5dp"
-        app:startIconDrawable="@drawable/baseline_email"
-        app:helperText=""
-        app:counterEnabled="true"
-        app:endIconMode="clear_text"
-        app:helperTextTextColor="@color/green"
-        app:layout_constraintEnd_toEndOf="@+id/surnameContainer"
-        app:layout_constraintStart_toStartOf="@+id/surnameContainer"
-        app:layout_constraintTop_toBottomOf="@+id/surnameContainer">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailEditText"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/surnameContainer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/yellow"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:lines="1" />
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:hint="Nazwisko"
+            app:startIconDrawable="@drawable/baseline_person"
+            app:helperText=""
+            app:counterEnabled="true"
+            app:counterMaxLength="20"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/green"
+            app:layout_constraintEnd_toEndOf="@+id/nameContainer"
+            app:layout_constraintStart_toStartOf="@+id/nameContainer"
+            app:layout_constraintTop_toBottomOf="@+id/nameContainer">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/surnameEditText"
+                android:maxLength="20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/yellow"
+                android:inputType="textPersonName"
+                android:lines="1" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/numberContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="5dp"
-        app:startIconDrawable="@drawable/baseline_call"
-        app:prefixText="+48"
-        app:helperText=""
-        app:counterEnabled="true"
-        app:counterMaxLength="9"
-        app:endIconMode="clear_text"
-        app:helperTextTextColor="@color/green"
-        app:layout_constraintEnd_toEndOf="@+id/emailContainer"
-        app:layout_constraintStart_toStartOf="@+id/emailContainer"
-        app:layout_constraintTop_toBottomOf="@+id/emailContainer">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/numberEditText"
-            android:maxLength="9"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailContainer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/yellow"
-            android:hint="Numer"
-            android:inputType="phone"
-            android:lines="1" />
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            app:startIconDrawable="@drawable/baseline_email"
+            app:helperText=""
+            app:counterEnabled="true"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/green"
+            app:layout_constraintEnd_toEndOf="@+id/surnameContainer"
+            app:layout_constraintStart_toStartOf="@+id/surnameContainer"
+            app:layout_constraintTop_toBottomOf="@+id/surnameContainer">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/yellow"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:lines="1" />
 
-<!--    <Button-->
-<!--        android:id="@+id/canc"-->
-<!--        android:layout_width="120dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_marginStart="4dp"-->
-<!--        android:layout_marginTop="3dp"-->
-<!--        android:backgroundTint="@color/grey"-->
-<!--        android:text="cancel"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/numberContainer"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/numberContainer" />-->
+        </com.google.android.material.textfield.TextInputLayout>
 
-<!--    <Button-->
-<!--        android:id="@+id/save"-->
-<!--        android:layout_width="120dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_marginTop="3dp"-->
-<!--        android:layout_marginEnd="40dp"-->
-<!--        android:backgroundTint="@color/grey"-->
-<!--        android:text="save"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/numberContainer"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/numberContainer" />-->
-
-    <Button
-        android:id="@+id/us_k"
-        android:layout_width="156dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="13dp"
-        android:backgroundTint="@color/f2"
-        android:text="usuń kąto"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberContainer" />
-
-    <Button
-        android:id="@+id/wyl"
-        android:layout_width="156dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="32dp"
-        android:backgroundTint="@color/f1"
-        android:text="edytój dane"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberContainer" />
-
-
-    <TextView
-        android:id="@+id/text_dane"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Developer"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold|italic"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.065"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/us_k"
-        app:layout_constraintVertical_bias="0.04000002" />
-
-    <View
-        android:id="@+id/title_separator4"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/text_dane" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textContainer"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="3dp"
-        app:layout_constraintEnd_toEndOf="@+id/numberContainer"
-        app:layout_constraintStart_toStartOf="@+id/numberContainer"
-        app:layout_constraintTop_toBottomOf="@+id/text_dane"
-        app:counterEnabled="true"
-        app:counterMaxLength="100"
-        app:endIconMode="clear_text">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textEditText"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/numberContainer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:background="@color/yellow"
-            android:gravity="top|start"
-            android:hint="Masz uwagi do aplikacji?"
-            android:inputType="textMultiLine"
-            android:lines="8"
-            android:maxLines="10"
-            android:minLines="1"
-            android:maxLength="100"
-            android:scrollbarStyle="insideOverlay"
-            android:scrollbars="vertical" />
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            app:startIconDrawable="@drawable/baseline_call"
+            app:prefixText="+48"
+            app:helperText=""
+            app:counterEnabled="true"
+            app:counterMaxLength="9"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/green"
+            app:layout_constraintEnd_toEndOf="@+id/emailContainer"
+            app:layout_constraintStart_toStartOf="@+id/emailContainer"
+            app:layout_constraintTop_toBottomOf="@+id/emailContainer">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/numberEditText"
+                android:maxLength="9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/yellow"
+                android:hint="Numer"
+                android:inputType="phone"
+                android:lines="1" />
 
-<!--    <Button-->
-<!--        android:id="@+id/cancT"-->
-<!--        android:layout_width="120dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:backgroundTint="@color/grey"-->
-<!--        android:text="cancel"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/us_k"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textContainer" />-->
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/send"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/grey"
-        android:text="send"
-        app:layout_constraintEnd_toEndOf="@+id/wyl"
-        app:layout_constraintTop_toBottomOf="@+id/textContainer" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--    <Button-->
+    <!--        android:id="@+id/canc"-->
+    <!--        android:layout_width="120dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginStart="4dp"-->
+    <!--        android:layout_marginTop="3dp"-->
+    <!--        android:backgroundTint="@color/grey"-->
+    <!--        android:text="cancel"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/numberContainer"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/numberContainer" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/save"-->
+    <!--        android:layout_width="120dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginTop="3dp"-->
+    <!--        android:layout_marginEnd="40dp"-->
+    <!--        android:backgroundTint="@color/grey"-->
+    <!--        android:text="save"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/numberContainer"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/numberContainer" />-->
+
+        <Button
+            android:id="@+id/us_k"
+            android:layout_width="156dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="13dp"
+            android:backgroundTint="@color/f2"
+            android:text="usuń dane"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberContainer" />
+
+        <Button
+            android:id="@+id/wyl"
+            android:layout_width="156dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/f1"
+            android:text="edytój dane"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberContainer" />
+
+
+        <TextView
+            android:id="@+id/text_dane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developer"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/us_k"
+            app:layout_constraintVertical_bias="0.04000002" />
+
+        <View
+            android:id="@+id/title_separator4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/text_dane" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textContainer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintEnd_toEndOf="@+id/numberContainer"
+            app:layout_constraintStart_toStartOf="@+id/numberContainer"
+            app:layout_constraintTop_toBottomOf="@+id/text_dane"
+            app:counterEnabled="true"
+            app:counterMaxLength="100"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textEditText"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="@color/yellow"
+                android:gravity="top|start"
+                android:hint="Masz uwagi do aplikacji?"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="1"
+                android:maxLength="100"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbars="vertical" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    <Button-->
+    <!--        android:id="@+id/cancT"-->
+    <!--        android:layout_width="120dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:backgroundTint="@color/grey"-->
+    <!--        android:text="cancel"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/us_k"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textContainer" />-->
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/grey"
+            android:text="send"
+            app:layout_constraintEnd_toEndOf="@+id/wyl"
+            app:layout_constraintTop_toBottomOf="@+id/textContainer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

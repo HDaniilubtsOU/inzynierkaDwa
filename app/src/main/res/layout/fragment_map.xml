@@ -25,11 +25,18 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.google.android.gms.maps.MapView
+        <TextView
             android:id="@+id/map_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="Map"/>
+            android:text="Mapa"
+            android:textSize="36dp"
+            android:gravity="center"/>
+<!--        <com.google.android.gms.maps.MapView-->
+<!--            android:id="@+id/map_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:contentDescription="Map"/>-->
 
     </LinearLayout>
 
