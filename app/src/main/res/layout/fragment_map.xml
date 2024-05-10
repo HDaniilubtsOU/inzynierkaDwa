@@ -6,47 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".MapFragment">
 
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    tools:context=".MapFragment"-->
+<!--&lt;!&ndash;    xmlns:app="http://schemas.android.com/apk/res-auto"&ndash;&gt;-->
+<!--&lt;!&ndash;    tools:context=".MapFragment"&ndash;&gt;-->
 
-<!--    android:id="@+id/mapFragment"-->
-<!--    android:name="com.google.android.gms.maps.SupportMapFragment"-->
-<!--    app:layout_constraintBottom_toBottomof="parent"-->
-<!--    app:layout_constraintEnd_toEndOf="parent"-->
-<!--    app:layout_constraintStart_toStartOf="parent"-->
-<!--    app:layout_constraintTop_toTopOf="parent"-->
+<!--&lt;!&ndash;    android:id="@+id/mapFragment"&ndash;&gt;-->
+<!--&lt;!&ndash;    android:name="com.google.android.gms.maps.SupportMapFragment"&ndash;&gt;-->
+<!--&lt;!&ndash;    app:layout_constraintBottom_toBottomof="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;    app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;    app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;    app:layout_constraintTop_toTopOf="parent"&ndash;&gt;-->
 
 
 
-    <LinearLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/map_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+<!--    <LinearLayout-->
+<!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--        android:id="@+id/map_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
 
-        <TextView
-            android:id="@+id/map_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Mapa"
-            android:textSize="36dp"
-            android:gravity="center"/>
-<!--        <com.google.android.gms.maps.MapView-->
+<!--        <TextView-->
 <!--            android:id="@+id/map_view"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="match_parent"-->
-<!--            android:contentDescription="Map"/>-->
+<!--            android:text="Mapa"-->
+<!--            android:textSize="36dp"-->
+<!--            android:gravity="center"/>-->
+<!--&lt;!&ndash;        <com.google.android.gms.maps.MapView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/map_view"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:contentDescription="Map"/>&ndash;&gt;-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-    <!-- TODO: Update blank fragment layout -->
-<!--    <TextView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:text="Map Fragment"-->
-<!--        android:textSize="36sp"-->
-<!--        android:textColor="@color/blue"-->
-<!--        android:gravity="center"/>-->
+<!--    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
+<!--&lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="Map Fragment"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textSize="36sp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textColor="@color/blue"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:gravity="center"/>&ndash;&gt;-->
+
+
+    <com.mapbox.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="75dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/baseline_my_location"
+        tools:backgroundTint="@color/grey"/>
+
 
 </FrameLayout>
